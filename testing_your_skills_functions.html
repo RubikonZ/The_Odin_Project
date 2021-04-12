@@ -1,0 +1,113 @@
+<!--
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Functions: Task 2</title>
+        <style>
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        canvas {
+            border: 1px solid black;
+        }
+        </style>
+        <link rel="stylesheet" href="../styles.css" />
+    </head>
+
+    <body>
+
+        <section class="preview">
+
+        </section>
+
+        <canvas width="480" height="320">
+
+        </canvas>
+
+    </body>
+    <script>
+        let canvas = document.querySelector('canvas');
+        let ctx = canvas.getContext('2d');
+
+        let x = 50;
+        let y = 60;
+        let width = 100;
+        let height = 75;
+        let color = 'blue';
+
+        // Add your code here
+        function drawRectangle() {
+            ctx.clearRect(0, 0, 400, 400);
+            ctx.beginPath();
+            ctx.strokeStyle = color;
+            ctx.rect(x, y, width, height);
+            ctx.stroke();
+        }
+        // Don't edit the code below here!
+
+        const section = document.querySelector('section');
+    </script>
+
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Functions: Task 3</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    let names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+    let para = document.createElement('p');
+
+    // Add your code here
+    function random(min_val=2, max_val=4) {
+        let rnd_nmbr = Math.floor(Math.random()*(max_val + 1));
+        if (rnd_nmbr < min_val) {
+            rnd_nmbr = min_val;
+        }
+        return rnd_nmbr;
+    }
+
+    function chooseName(rand_nmbr=random(2, 4), my_array=['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']) {
+        return my_array[rand_nmbr];
+    }
+
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    section.appendChild(para);
+  </script>
+
+</html>

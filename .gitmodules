@@ -1,0 +1,9 @@
+[submodule "Google-homepage"]
+	path = Google-homepage
+	url = git@github.com:RubikonZ/google-homepage.git
+[submodule "google-homepage"]
+	path = google-homepage
+	url = git@github.com:RubikonZ/google-homepage.git
+[submodule "javascript-exercises"]
+	path = javascript-exercises
+	url = git@github.com:TheOdinProject/javascript-exercises.git

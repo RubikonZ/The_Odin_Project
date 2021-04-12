@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <button>Press me</button>
+        <script>
+            // That's where I gotta put JS code
+            console.log("Hello, World!")
+            console.log(69+69)
+            console.log(2+4+8+16+32+64)
+            console.log((4+6+9)/77)
+
+            const max = 57
+            let actual = max - 13
+            let percentage = actual / max
+            
+            const button = document.querySelector('button');
+
+            button.onclick = function() {
+                let name = prompt('What is your login?')
+                if (name == 'Admin') {
+                    let passwrd = prompt('Enter your password')
+                    if (passwrd == 'TheMaster') {
+                        alert('Welcome!')
+                    } 
+                    else if (passwrd == '' || passwrd == null) {
+                        alert('Canceled')
+                    } 
+                    else {
+                        alert('Wrong password')
+                    }
+                } 
+                else if (name == '' || name == null) {
+                    alert('Canceled')
+                }
+                else {
+                    alert('I dont know you')
+                }
+            }
+/*
+            let nmbr = prompt('Please, enter any number')
+            if (nmbr > 0) {
+                alert(1);
+            } else if (nmbr < 0) {
+                alert(-1)
+            } else if (nmbr == 0) {
+                alert(0)
+            } 
+*/
+            let result;
+
+            let a = 4;
+            let b = 5;            
+            (a + b < 4) ? result = 'Below' : result = 'Over';
+            alert(result)
+
+            let message;
+
+            
+
+            let message = (login == 'Employee') ? 'Hello' : 
+            (login == 'Director') ? 'Greetings' : 
+            (login == '') ? 'No login' : 
+            '';
+
+        </script>
+    </body>
+</html>

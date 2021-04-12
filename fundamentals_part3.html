@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Functions: Task 3</title>
+    <style>
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+  </body>
+  <script>
+    function ask(question, yes, no) {
+        if (confirm(question)) yes();
+        else no();
+    }
+
+    ask(("Do you agree?"), () => alert("You agreed"), () => alert("You disagreed"))
+
+    function add7 (n) {
+        return n+7
+    }
+
+    let add2 = (n) => n+7
+
+
+    function multiply (a, b) {
+        return a*b
+    }
+
+    let multiply2 = (a, b) => a*b
+
+    function capitalize (st) {
+        return (st[0].toUpperCase() + st.slice(1).toLowerCase())
+    }
+
+    let capitalize2 = st => st[0].toUpperCase() + st.slice(1).toLowerCase()
+
+    let lastLetter = stt => stt[stt.length - 1]
+
+  </script>
+
+</html>
