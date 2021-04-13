@@ -14,8 +14,6 @@ html, body {
 .child {
     display: flex;
     justify-content: center;
-    width: calc(100%*1/16);
-    height: calc(100%*1/16);
     background-color: DodgerBlue;
     align-items: center;
 }
