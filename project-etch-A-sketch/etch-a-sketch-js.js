@@ -16,7 +16,7 @@ function createNewGrid(grid_size=16) {
     }
     
     let back_color;
-    container.addEventListener('mouseenter', () => back_color = `#${(0x1000000+Math.random()*0xffffff).toString(16).substr(1,6)}`);
+    container.addEventListener('mouseleave', () => back_color = `#${(0x1000000+Math.random()*0xffffff).toString(16).substr(1,6)}`);
     let pixels = document.querySelectorAll('.child')
     pixels.forEach((pixel) => pixel.addEventListener('mouseover', () => pixel.style.backgroundColor = back_color) )
 }
