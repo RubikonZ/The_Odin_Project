@@ -1,9 +1,10 @@
 const container = document.querySelector('.container')
 
-function createButton(text) {
+function createButton(text, order=10) {
     let btn = document.createElement('button');
     btn.className = 'btn';
     btn.textContent = text;
+    btn.style.order = `${order}`
     container.appendChild(btn)
     
 }
@@ -32,7 +33,10 @@ function multiplyNumbers(a, b) {
 }
 
 function clearDisplay() {
-
+    display.textContent = '';
+    firstNumber = 0;
+    secondNumber = 0;
+    operator = undefined;
 }
 
 function operate(operator, firstNumber, secondNumber) {
@@ -54,11 +58,11 @@ function operate(operator, firstNumber, secondNumber) {
 
 // Creating interface of calculator
 createDisplay()
-for (i = 1; i < 10; i++) {
-    createButton(i)
-}
-createButton(0);
-['+', '-', '/', '*', '=', 'CLEAR'].forEach(element => createButton(element));
+//for (i = 1; i < 10; i++) {
+//    createButton(i, i)
+//}
+buttonArray = ['1', '2', '3', '+', '4','5', '6', '-', '7', '8','9', '/', '=', '0', '*', 'CLEAR'];
+buttonArray.forEach(element => createButton(element, buttonArray.indexOf(element)+1));
 
 
 const buttons = document.querySelectorAll('.btn')
@@ -72,10 +76,7 @@ buttons.forEach(button => {
     
     function pressButton() {
         if (button.textContent == 'CLEAR') {
-            display.textContent = '';
-            firstNumber = 0;
-            secondNumber = 0;
-            operator = undefined;
+            clearDisplay()
         } else if (button.textContent == '=') {
             secondNumber = (display.textContent).slice(firstNumber.length + 3);
             operate(operator, firstNumber, secondNumber);
