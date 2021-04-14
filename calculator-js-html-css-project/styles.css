@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    font-size: 30px;
+}
+
+.container {
+    display: flex;
+    background-color: dodgerblue;
+    height: 600px;
+    width: 400px;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 5px;
+    box-shadow: grey;
+    
+}
+
+.btn {
+    display: flex;
+    height: 95px;
+    width: 95px;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    font-size: 20px;
+    border-color: green;
+    border-width: 10px;
+    border-radius: 5px;
+}
+
+.display {
+    display: flex;
+    width: 350px;
+    height: 50px;
+    background-color: ivory;
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    border-radius: 20px;
+    border-color: gray;
+    background-color: #00FFA0;
+}
